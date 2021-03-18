@@ -20,6 +20,7 @@ export CONFIG_FILE="${CI_SUPPORT}/${CONFIG}.yaml"
 
 cat >~/.condarc <<CONDARC
 
+ssl_verify: false
 conda-build:
  root-dir: ${FEEDSTOCK_ROOT}/build_artifacts
 
