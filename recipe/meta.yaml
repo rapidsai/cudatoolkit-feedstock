@@ -297,8 +297,8 @@ requirements:
 {% if "sysroot_version" in cudavars[major_minor] %}
     - sysroot_linux-64 {{ cudavars[major_minor]["sysroot_version"] }}  # [linux64]
 {% endif %}
-  run_constrained:
-    - __cuda >={{ major_minor }}
+#  run_constrained:
+#    - __cuda >={{ major_minor }}
 
 test:
   requires:
