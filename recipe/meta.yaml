@@ -3,7 +3,7 @@
 # Copyright (c) 2017, Continuum Analytics, Inc. All rights reserved.
 #
 # Distribution of the content approved by NVIDIA ( http://nvbugs/3052604 )
-{% set major_minor = major_minor_ver|default("11.2.2") %}
+{% set major_minor = major_minor_ver|default("11.3.1") %}
 
 # The following cudavars dictionary is a table of metadata for selecting various
 # paramaters based on the X.Y version number of cudatoolkit. The following is a description
@@ -199,7 +199,7 @@
     },
     "sysroot_version": "2.17",
   },
-    "11.2.2": {
+  "11.2.2": {
     "version": "11.2.2",
     "version_patch": {
       "linux64": "460.32.03",
@@ -213,6 +213,72 @@
       "linux64": "955ae5d59531923d32a3bfe3f68a7dfe",
       "ppc64le": "1b3fc509541f6be0ee820e26a8ae1d88",
       "win": "f9da6687d8a4f137ff14f8389b496e0a",
+    },
+    "blob_ext": {
+      "linux64": ".run",
+      "ppc64le": ".run",
+      "win": ".exe",
+    },
+    "sysroot_version": "2.17",
+  },
+  "11.3": {
+    "version": "11.3.0",
+    "version_patch": {
+      "linux64": "465.19.01",
+      "osx": "skip",
+      "ppc64le": "465.19.01",
+      "win": "465.89",
+    },
+    "subdomain": "developer.download",
+    "download_dir": "11.3.0",
+    "checksums": {
+      "linux64": "406cecd830bb369fa4d3bd6f50a39a7a",
+      "ppc64le": "e28dda25340158eea51d040e90a3aa9f",
+      "win": "564c6ecf0b82f481d291519387e71db5",
+    },
+    "blob_ext": {
+      "linux64": ".run",
+      "ppc64le": ".run",
+      "win": ".exe",
+    },
+    "sysroot_version": "2.17",
+  },
+  "11.3.1": {
+    "version": "11.3.1",
+    "version_patch": {
+      "linux64": "465.19.01",
+      "osx": "skip",
+      "ppc64le": "465.19.01",
+      "win": "465.89",
+    },
+    "subdomain": "developer.download",
+    "download_dir": "11.3.1",
+    "checksums": {
+      "linux64": "065d2a85decd34afab7e135c009830ee",
+      "ppc64le": "a8fb4ee2900ebfaeba217d652a7484f1",
+      "win": "7bf61cf7b059ba08197c70035879c352",
+    },
+    "blob_ext": {
+      "linux64": ".run",
+      "ppc64le": ".run",
+      "win": ".exe",
+    },
+    "sysroot_version": "2.17",
+  },
+  "11.4": {
+    "version": "11.4.0",
+    "version_patch": {
+      "linux64": "470.42.01",
+      "osx": "skip",
+      "ppc64le": "470.42.01",
+      "win": "471.11",
+    },
+    "subdomain": "developer.download",
+    "download_dir": "11.4.0",
+    "checksums": {
+      "linux64": "cbcc1bca492d449c53ab51c782ffb0a2",
+      "ppc64le": "10d22f0ed66d4b87a761a1d5df48e9d4",
+      "win": "423695ea246810200e210f07a0e0bd43",
     },
     "blob_ext": {
       "linux64": ".run",
@@ -259,7 +325,7 @@ source:
     md5: {{ cudavars[major_minor]["checksums"]["win"] }}  # [win]
 
 build:
-  number: 8
+  number: 9
   script_env:
     - NVTOOLSEXT_INSTALL_PATH
     - DEBUG_INSTALLER_PATH
@@ -315,7 +381,7 @@ about:
   home: https://developer.nvidia.com/cuda-toolkit
   # A LicenceRef cannot be used in this case, see:
   # https://github.com/conda-forge/staged-recipes/pull/12882#discussion_r504086944
-  license: NVIDIA End User License Agreement
+  license: LicenseRef-NVIDIA-End-User-License-Agreement
   license_file: NVIDIA_EULA
   license_url: https://docs.nvidia.com/cuda/eula/index.html
   description: |
@@ -325,7 +391,7 @@ about:
 
     License Agreements
     The packages are governed by the CUDA Toolkit End User License Agreement (EULA). By downloading and using the packages, you accept the terms and conditions of the CUDA EULA - https://docs.nvidia.com/cuda/eula/index.html
-  summary: 'CUDA Toolkit - Including CUDA runtime and headers'
+  summary: 'CUDA Toolkit - Including CUDA runtime'
   doc_url: https://docs.nvidia.com/cuda/
   dev_url: https://developer.nvidia.com/cuda-downloads
 
@@ -337,3 +403,4 @@ extra:
     - raydouglass
     - kkraus14
     - leofang
+    - jaimergp
