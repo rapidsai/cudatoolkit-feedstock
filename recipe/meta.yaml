@@ -299,7 +299,7 @@
     "download_dir": "11.4.1",
     "checksums": {
       "linux64": "0ceda24534455fa06d95f3dbd5125c94",
-      "ppc64le": "a276e14caa2a3bc383c5f0d036cacf91",
+      "ppc64le": "20b23926a485d5303cc88ae0478c7e60",
       "win": "03807b85cc98511adf6ba6eb77d42d9f",
     },
     "blob_ext": {
